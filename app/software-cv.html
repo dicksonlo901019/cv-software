@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>盧駿軒 Dickson Lo - 軟體產品履歷</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #607086;
+      --line: #d8dee8;
+      --panel: #f6f8fb;
+      --accent: #2563eb;
+      --accent-soft: #eaf1ff;
+      --link: #1155cc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #eef2f6;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      width: min(1040px, calc(100% - 32px));
+      margin: 28px auto;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 50px rgba(22, 34, 51, 0.12);
+    }
+
+    header {
+      padding: 34px 44px 24px;
+      border-bottom: 4px solid var(--accent);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+    }
+
+    h1 { margin: 0; font-size: 34px; letter-spacing: 0; line-height: 1.15; }
+
+    .headline {
+      margin-top: 8px;
+      color: var(--accent);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .summary {
+      margin: 14px 0 0;
+      max-width: 780px;
+      color: #2d3949;
+      font-size: 15px;
+    }
+
+    .contact {
+      text-align: right;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .contact div { margin-bottom: 5px; }
+    main { padding: 28px 44px 42px; }
+    section { margin: 0 0 30px; }
+
+    h2 {
+      margin: 0 0 14px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--line);
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    h3 { margin: 0; font-size: 16px; line-height: 1.35; }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .skill-group {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 13px 14px;
+    }
+
+    .skill-group strong {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 13px;
+      color: var(--accent);
+    }
+
+    .skill-group span {
+      display: block;
+      color: #344255;
+      font-size: 13px;
+    }
+
+    .role {
+      padding: 0 0 22px;
+      margin-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .role:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+
+    .role-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 8px;
+    }
+
+    ul { margin: 8px 0 0 20px; padding: 0; }
+    li { margin: 5px 0; }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .project {
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 14px;
+    }
+
+    .project h3 { color: var(--accent); font-size: 15px; }
+
+    .project p {
+      margin: 7px 0 0;
+      color: #344255;
+      font-size: 13px;
+    }
+
+    .tags {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: var(--accent-soft);
+      color: #1d4ed8;
+      border: 1px solid #c7d7fe;
+      padding: 2px 7px;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .compact-list {
+      columns: 2;
+      column-gap: 28px;
+      margin-top: 6px;
+    }
+
+    .note { color: var(--muted); font-size: 12px; margin-top: 8px; }
+
+    @media (max-width: 760px) {
+      .page { width: 100%; margin: 0; border: 0; box-shadow: none; }
+      header, main { padding-left: 22px; padding-right: 22px; }
+      header, .role-head, .skills, .project-list, .grid { grid-template-columns: 1fr; }
+      .contact { text-align: left; white-space: normal; }
+      .compact-list { columns: 1; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; margin: 0; border: 0; box-shadow: none; }
+      header { padding-top: 18px; }
+      main { padding-bottom: 18px; }
+      section, .role, .project { break-inside: avoid; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <div>
+        <h1>盧駿軒 Dickson Lo</h1>
+        <div class="headline">資深產品經理 | SaaS / 平台產品 | AI 工作流自動化</div>
+        <p class="summary">
+          具備 10 年產品管理經驗，擅長將複雜業務流程轉化為可交付的軟體產品、管理後台、App/Web 流程與 AI 輔助研發工作流。曾帶領 5 人產品與設計團隊，於 4 個月內完成 0 到 1 平台上線；近期自主建立 AI Agent 產品開發流程，將需求拆解為 PRD、wireframe、design-system mapping 與 high-fidelity prototype，縮短從概念到可驗證原型的週期。
+        </p>
+      </div>
+      <div class="contact">
+        <div>台灣台北</div>
+        <div><a href="mailto:dicksonlo901019@gmail.com">dicksonlo901019@gmail.com</a></div>
+        <div>中文 / 粵語母語</div>
+        <div>英文中級</div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>核心能力</h2>
+        <div class="skills">
+          <div class="skill-group">
+            <strong>產品策略與交付</strong>
+            <span>0 到 1 上線、roadmap planning、PRD/FRD/BRD、user journey、模組化需求</span>
+          </div>
+          <div class="skill-group">
+            <strong>SaaS / 管理後台</strong>
+            <span>Management console、approval flow、permission model、account operations、workflow tooling</span>
+          </div>
+          <div class="skill-group">
+            <strong>AI 產品工作流</strong>
+            <span>Agentic workflow、prompt engineering、IR mapping、DS Dictionary、prompt-to-code prototype</span>
+          </div>
+          <div class="skill-group">
+            <strong>平台架構</strong>
+            <span>Account model、資料一致性、risk controls、system states、跨職能邏輯對齊</span>
+          </div>
+          <div class="skill-group">
+            <strong>UX / 原型設計</strong>
+            <span>Figma、Axure、wireframe、high-fidelity prototype、design-to-code handoff</span>
+          </div>
+          <div class="skill-group">
+            <strong>工具與技術理解</strong>
+            <span>Jira、Postman、WebSocket/RESTful API testing、VS Code、React/Tailwind prototypes</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>工作經歷</h2>
+
+        <div class="role">
+          <div class="role-head">
+            <div>
+              <h3>奇換橘子股份有限公司（Xchanger Co., Ltd.，橘子集團子公司） - Web 產品經理</h3>
+              <div class="meta">AI 工作流自動化 / Web 平台 / NFT 產品</div>
+            </div>
+            <div class="meta">2025 年 7 月至今 | 台北</div>
+          </div>
+          <ul>
+            <li>自主建立 Agentic Workflow 產品自動化引擎，將 PM、UI/UX、Front-End、Figma 相關角色拆解為可協作的 AI workflow。</li>
+            <li>設計以單一 LLM 為核心的 routing 架構，透過 prompt switching、state handoff、folder standard 與 phased deliverables，讓需求能穩定產出 PRD、wireframe、semantic mapping 與 high-fidelity prototype。</li>
+            <li>設計 IR mapping 與 DS Dictionary 約束，降低 LLM hallucination，使 AI 產出的 UI/prototype 更符合工程語義與規範。</li>
+            <li>主導 Web platform 產品規劃，涵蓋使用者連線、簽署流程、資產狀態、資料一致性監控與 non-custodial withdrawal 相關安全流程。</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head">
+            <div>
+              <h3>亞太滿譽科技有限公司 - 產品經理至產品負責人</h3>
+              <div class="meta">平台產品 / 交易與營運系統 / 產品團隊負責人</div>
+            </div>
+            <div class="meta">2022 年 7 月 - 2025 年 7 月 | 台北</div>
+          </div>
+          <ul>
+            <li>從 Product Manager 晉升為 Product Lead，帶領 5 人產品與設計團隊，負責高複雜度交易平台、管理後台與營運系統建設。</li>
+            <li>於 4 個月內推動 0 到 1 平台上線，定義 account architecture、approval flow、rebate engine、routing、risk-control systems 與 internal operations tooling。</li>
+            <li>主導 PRD 模組化與 technical pre-review 機制，達成 100% requirement componentization 與 80% complex logic alignment，降低開發阻塞並提升交付效率。</li>
+            <li>設計多帳戶資產架構、1-6 層 dynamic approval flow、平台側營運帳戶、關鍵配置異動流程與定期資料快照機制，提升內部作業可控性與稽核透明度。</li>
+            <li>主導 Web/App 自動化策略工具設計，涵蓋參數設定、狀態機、風險提示、計算邏輯、訂單拆分、後台查詢與客服可視化需求。</li>
+            <li>設計 marketplace / routing flows，包含第三方供應商聚合、價格保護、供給優先級、帳戶安全限制與 cancellation-risk controls。</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head">
+            <div>
+              <h3>Narrow Pacific - 產品經理</h3>
+              <div class="meta">App / Web 流程規劃 | 帳戶與電商產品</div>
+            </div>
+            <div class="meta">2021 - 2022</div>
+          </div>
+          <ul>
+            <li>執行市場調查與使用者訪談，主導 App/Web flow planning 與 prototype 設計。</li>
+            <li>負責 Hash Card 產品規劃素材，包含 FRD、Gantt chart、issue tracking、kanban、mindmap 與 wireframe。</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head">
+            <div>
+              <h3>INNO-OZ - 產品 / 專案經理</h3>
+              <div class="meta">客戶專案 | 電商 / 社群 / IoT / 內部工具</div>
+            </div>
+            <div class="meta">2016 - 2021</div>
+          </div>
+          <ul>
+            <li>主導 5-6 個客戶專案從規劃到上線，橫跨 e-commerce tools、social media、industry internal tools、IoT tools 與 end-user apps。</li>
+            <li>產出 FRD、user case、wireframe、prototype、flow chart、competitive product analysis、issue tracking、kanban 與 gantt chart 等產品與交付素材。</li>
+            <li>改善 API documentation standardization 流程，提升開發協作效率。</li>
+            <li>代表作品包含 Shopify single product page system、Yulon Group In-house App、BESV Sport App、NTPU Carbon Assets、Auction House App、Tracker App。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>重點專案</h2>
+        <div class="project-list">
+          <div class="project">
+            <h3>AI Agent 產品開發工作流</h3>
+            <p>導入 AI Agent 重塑產品開發流程，建立 PM、UI/UX、Figma Automation Engineer、Front-End Engineer 等角色，將 business requirements 轉為 PRD、wireframe、semantic mapping 與 high-fidelity prototype。</p>
+            <div class="tags">
+              <span class="tag">AI Workflow</span><span class="tag">LLM</span><span class="tag">Prompt Engineering</span><span class="tag">Design-to-Code</span>
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>0 到 1 平台與營運系統</h3>
+            <p>帶領 5 人產品/設計團隊於 4 個月內完成高複雜度平台上線，涵蓋 account model、approval workflow、risk controls、internal admin console、data snapshot 與 reconciliation logic。</p>
+            <div class="tags">
+              <span class="tag">Platform PM</span><span class="tag">Admin System</span><span class="tag">Workflow</span><span class="tag">0-to-1</span>
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>自動化策略工具</h3>
+            <p>設計 Web/App 自動化策略產品，包含策略生命週期、參數設定、狀態管理、風險提示、計算模型、訂單處理、後台統計與客服查詢需求。</p>
+            <div class="tags">
+              <span class="tag">Complex Logic</span><span class="tag">State Machine</span><span class="tag">Risk UX</span><span class="tag">Web/App</span>
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>Shopify CMS 模板管理工具</h3>
+            <p>設計 22 頁 Axure prototype，涵蓋 product settings、template management、search/no-result states、preview、delete、apply-product popup、新增與編輯流程。</p>
+            <div class="tags">
+              <span class="tag">SaaS</span><span class="tag">E-commerce</span><span class="tag">CRUD</span><span class="tag">Axure</span>
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>Auction House 拍賣 App</h3>
+            <p>規劃 marketplace app 的資訊架構與 wireframe，涵蓋 auction schedule、online/offline lots、bidding registration、filters、account center、saved items 與 valuation request。</p>
+            <div class="tags">
+              <span class="tag">Marketplace</span><span class="tag">Mobile App</span><span class="tag">IA</span><span class="tag">User Flow</span>
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>BESV Sport App / IoT 產品</h3>
+            <p>參與 IoT sports app 與 tracking app 相關產品規劃，產出 FRD、user case、prototype、issue tracking、flow chart、mindmap 與 wireframe。</p>
+            <div class="tags">
+              <span class="tag">IoT</span><span class="tag">App Product</span><span class="tag">FRD</span><span class="tag">Delivery</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>作品與證據連結</h2>
+        <ul class="compact-list">
+          <li>AI Agent 產品開發工作流：<a href="https://app.notion.com/signed/attachment%3Af5e0a323-8efa-435f-976b-aef9b719cc62%3ALogin-Registration-Prototype.html?table=block&amp;id=3647b3c5-8f8f-807f-83f1-d23dc2689846&amp;spaceId=01c7adb0-0ae5-4322-931e-69241a37dffc&amp;userId=16a9f09c-36a2-4926-ba9e-8caad1ab567f&amp;cache=v2&amp;imgBuildSrc=getSignedFileProxyUrl">登入 / 註冊原型</a>、<a href="https://app.notion.com/signed/attachment%3Aad74e6dc-da1c-404e-81a6-f3b924fbcdb2%3ACEXxAIxLandingPage.html?table=block&amp;id=3647b3c5-8f8f-80f4-b338-cadc86a4d387&amp;spaceId=01c7adb0-0ae5-4322-931e-69241a37dffc&amp;userId=16a9f09c-36a2-4926-ba9e-8caad1ab567f&amp;cache=v2&amp;imgBuildSrc=getSignedFileProxyUrl">CEX x AI Landing Page</a></li>
+          <li>Xchanger NFT Platform 功能原型：<a href="https://app.notion.com/signed/attachment%3Ae2bbdce6-1882-40eb-bbe0-853af83b7ab9%3ABecome-Seller-Brainstorm-Prototype.html?table=block&amp;id=3907b3c5-8f8f-8057-acd4-cfa1114d1b88&amp;spaceId=01c7adb0-0ae5-4322-931e-69241a37dffc&amp;userId=16a9f09c-36a2-4926-ba9e-8caad1ab567f&amp;cache=v2&amp;imgBuildSrc=getSignedFileProxyUrl">成為賣家構想原型</a>、<a href="https://app.notion.com/signed/attachment%3A460f9e3c-67cf-4b52-8414-49382fa49a6a%3ACollection-Optimization-Prototype.html?table=block&amp;id=3907b3c5-8f8f-80f4-ae6e-d8127e582bd7&amp;spaceId=01c7adb0-0ae5-4322-931e-69241a37dffc&amp;userId=16a9f09c-36a2-4926-ba9e-8caad1ab567f&amp;cache=v2&amp;imgBuildSrc=getSignedFileProxyUrl">收藏集優化原型</a></li>
+          <li>Shopify 商品頁系統：<a href="https://app.notion.com/p/Design-single-product-page-system-for-Shopify-001a0256dc8a46b18fb0d5728ec2153d?pvs=21">作品集</a></li>
+          <li>Auction House App：<a href="https://app.notion.com/p/Auction-House-App-5855c761845c48df9f3c4eb5450dfef1?pvs=21">作品集</a></li>
+          <li>BESV Sport App：<a href="https://apps.apple.com/tw/app/besv-sport-app/id1260486200">App Store</a></li>
+          <li>NTPU Carbon Assets：<a href="https://sites.google.com/gm.ntpu.edu.tw/talag/%E8%B2%A0%E7%A2%B3%E5%95%86%E5%93%81%E5%B0%88%E5%8D%80/my-carbon-asset-%E7%9A%84%E8%A4%87%E6%9C%AC">官方網站</a></li>
+          <li>Tracker App：<a href="https://app.notion.com/p/Tracker-App-22c236c034074c1f844bb92a68661662?pvs=21">作品集</a></li>
+          <li>Yulon Group 內部 App：<a href="https://app.notion.com/p/Yulon-Group-In-house-App-5cb7d564c0684fb48a2d1cf78c7f7ac5?pvs=21">作品集</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>教育與語言</h2>
+        <div class="grid">
+          <div>
+            <h3>中國文化大學</h3>
+            <div class="meta">森林暨自然保育學系 學士 | 2015 年 6 月</div>
+          </div>
+          <div>
+            <h3>語言能力</h3>
+            <div class="meta">中文: 母語 | 粵語: 母語 | 英文: 中級</div>
+          </div>
+        </div>
+        <p class="note">語系：繁體中文（zh-Hant）。軟體業版本，定位重點為 SaaS / 平台產品管理、AI 工作流自動化、管理後台、產品交付與跨職能協作。</p>
+      </section>
+    </main>
+  </article>
+</body>
+</html>
