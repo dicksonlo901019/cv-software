@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { access } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -14,22 +14,21 @@ async function render() {
   );
 }
 
-test("renders Dickson Lo's public software CV", async () => {
+test("redirects the public URL directly to the software CV", async () => {
   const response = await render();
-  assert.equal(response.status, 200);
-  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
-
-  const html = await response.text();
-  assert.match(html, /盧駿軒 Dickson Lo/);
-  assert.match(html, /資深產品經理/);
-  assert.match(html, /AI Agent 產品開發工作流/);
-  assert.match(html, /下載 PDF/);
-  assert.match(html, /name="robots" content="noindex, nofollow"/i);
-  assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
+  assert.equal(response.status, 307);
+  assert.equal(response.headers.get("location"), "http://localhost/software-cv");
 });
 
 test("ships the downloadable CV and social preview", async () => {
+  const cvUrl = new URL("../public/software-cv.html", import.meta.url);
+  const cv = await readFile(cvUrl, "utf8");
+
+  assert.match(cv, /盧駿軒 Dickson Lo/);
+  assert.match(cv, /下載 PDF/);
+  assert.match(cv, /dickson-cex-ai-landing-page/);
   await Promise.all([
+    access(cvUrl),
     access(new URL("../public/dickson-lo-software-cv.pdf", import.meta.url)),
     access(new URL("../public/og.png", import.meta.url)),
   ]);
