@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 
-const title = "盧駿軒 Dickson Lo｜資深產品經理";
+const title = "Dickson Lo | Senior Product Manager";
 const description =
-  "具備 10 年產品管理經驗，專注 SaaS、平台產品、管理後台與 AI 工作流自動化。";
+  "Senior product manager with 10 years of experience across SaaS, platform products, admin systems, and AI workflow automation.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
     robots: { index: false, follow: false },
     openGraph: {
       type: "profile",
-      locale: "zh_TW",
+      locale: "en_US",
       title,
       description,
       url: baseUrl,
@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="zh-Hant">
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
