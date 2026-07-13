@@ -24,8 +24,8 @@ test("ships the downloadable CV and social preview", async () => {
   const cvUrl = new URL("../public/software-cv.html", import.meta.url);
   const cv = await readFile(cvUrl, "utf8");
 
-  assert.match(cv, /盧駿軒 Dickson Lo/);
-  assert.match(cv, /下載 PDF/);
+  assert.match(cv, /Dickson Lo/);
+  assert.match(cv, /Download PDF/);
   assert.match(cv, /dickson-cex-ai-landing-page/);
   await Promise.all([
     access(cvUrl),
