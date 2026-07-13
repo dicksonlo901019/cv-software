@@ -1,4 +1,4 @@
-name: Deploy CV to GitHub Pages
+name: Deploy Software PM CV to GitHub Pages
 
 on:
   push:

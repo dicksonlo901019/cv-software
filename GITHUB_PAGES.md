@@ -1,4 +1,4 @@
-# 線上 CV：GitHub Pages 發布與版本管理
+# Software PM CV：GitHub Pages 發布與版本管理
 
 ## 架構
 
@@ -17,7 +17,7 @@
 
 ## 第一次啟用
 
-1. 在 GitHub 建立公開 repository。建議名稱：`cv-site`。
+1. 使用公開 repository：`cv-software`。
 2. 將本機 repository 新增 GitHub remote，保留既有 `sites` remote。
 3. 推送 `main` 與版本 tags 到 GitHub。
 4. 到 repository 的 **Settings → Pages → Build and deployment**，將 Source 設為
@@ -32,7 +32,7 @@
 2. 執行 `npm run pages:build`，確認 `pages-dist/index.html` 與 PDF 已產生。
 3. 在本機預覽 `pages-dist/`，檢查手機版、列印與所有連結。
 4. 建立一個只包含本次履歷更新的 commit。
-5. 建立不可重複的版本標籤，例如：`cv-v2026.07.13.1`。
+5. 建立不可重複的版本標籤，例如：`cv-software-v2026.07.13.1`。
 6. 推送 `main` 與標籤。`main` 更新會自動發布 GitHub Pages。
 7. 到 Actions 確認部署成功，再打開公開網址抽查。
 
@@ -42,7 +42,7 @@
 
 標準方式使用 `git revert`，建立一個「還原」commit 後推送 `main`。這樣不會重寫
 歷史，且 GitHub Actions 會自動發布還原後內容。完成後再建立一個新 tag，例如
-`cv-v2026.07.13.2`。
+`cv-software-v2026.07.13.2`。
 
 若要精確回復到某個 tag，先比較該 tag 與 `main`，再 revert tag 之後的 CV commits。
 不要 force-push `main`，也不要刪除既有 tags。GitHub 的 commit、tag 與 Actions
